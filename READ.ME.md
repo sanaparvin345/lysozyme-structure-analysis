@@ -181,4 +181,4 @@ The 28 residues within 5 Å of Glu35 or Asp52 form four stretches of the sequenc
 
 ## 11. Author
 
-[Your name], BSc Biotechnology, [your university].
+[Sana Parvin], BSc Biotechnology, [Sister Nivedita University].
