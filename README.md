@@ -99,7 +99,7 @@ source("plot_r.R")
 
 *Relative solvent accessibility of each residue. Orange bars are exposed, blue bars are buried, the dashed line is the 0.25 cutoff, and red lines mark Glu35 and Asp52.*
 
-**Observation:** The structure is split almost evenly between exposed (60) and buried (69) residues. Thirteen residues have no accessible surface at all (residues 8, 9, 17, 26, 28, 29, 31, 32, 54, 60, 64, 95 and 105), which appear as missing bars in the plot. The most exposed residues are Arg128 (0.84), Thr47 (0.82) and Gly117 (0.80). Polar and charged residues (D, E, K, R, N, Q, H, S, T, Y) have a mean relative SASA of 0.34, compared with 0.13 for hydrophobic residues (A, V, I, L, M, F, W, C), as expected for a folded globular protein. Both catalytic residues, Glu35 (0.17) and Asp52 (0.14), fall below the 0.25 cutoff.
+**Observation:** The structure is split almost evenly between exposed (60) and buried (69) residues. Thirteen residues have no accessible surface at all (residues 8, 9, 17, 26, 28, 29, 31, 32, 54, 60, 64, 95 and 105), which appear as missing bars in the plot. The most exposed residues are Arg128 (0.84), Thr47 (0.82), Pro70(0.71)and Gly117 (0.80). Polar and charged residues (D, E, K, R, N, Q, H, S, T, Y) have a mean relative SASA of 0.34, compared with 0.13 for hydrophobic residues (A, V, I, L, M, F, W, C), as expected for a folded globular protein. Both catalytic residues, Glu35 (0.17) and Asp52 (0.14), fall below the 0.25 cutoff.
 
 ### 6.3 Contact map
 
