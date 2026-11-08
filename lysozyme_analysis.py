@@ -16,7 +16,7 @@ Run:           python lysozyme_analysis.py
 import os
 import urllib.request
 
-import numpy as np
+import numpy as np 
 import pandas as pd
 import matplotlib
 
@@ -24,9 +24,25 @@ matplotlib.use("Agg")  # save figures to files, no pop-up windows
 import matplotlib.pyplot as plt
 
 from Bio.Data.IUPACData import protein_letters_3to1
-from Bio.PDB import NeighborSearch, PDBParser, PPBuilder
 from Bio.PDB.SASA import ShrakeRupley
+import math
+import pandas as pd
 
+rows = []
+for pp in ppb.build_peptides(structure):
+    for res, (phi, psi) in zip(pp, pp.get_phi_psi_list()):
+        if phi is not None and psi is not None:
+            rows.append({
+                "resnum": res.id[1],
+                "resname": res.get_resname(),
+                "phi": round(math.degrees(phi), 1),
+                "psi": round(math.degrees(psi), 1),
+            })
+rama = pd.DataFrame(rows)
+rama.to_csv("results/phi_psi.csv", index=False)
+nongly = rama[rama.resname != "GLY"]
+print(nongly[(nongly.phi.between(-105, -90)) & (nongly.psi.between(-150, -135))])
+print(nongly[nongly.phi > 0])
 # ----------------------------------------------------------------------
 # Settings
 # ----------------------------------------------------------------------
